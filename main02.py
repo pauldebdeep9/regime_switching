@@ -568,12 +568,13 @@ for i, df in enumerate(order_df_):
     order_matrix[config_name] = series
 
 def save_file(filename):
-    today = datetime.datetime.today().strftime('%Y-%m-%d')  # e.g., "2025-06-29"
-# Create file name with date appended
+    today = datetime.today().strftime('%Y-%m-%d')  # e.g., "2025-06-29"
+    # Create file name with date appended
     filename = f"order_matrix_{today}.csv"
-# Save
+    # Save
     order_matrix.to_csv(filename, index=False)
     return
+
 
 save_file(order_matrix)
 
